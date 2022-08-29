@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home work JS buoi 4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Bài tập 1 -->
+    <div class="container mb-5">
+        <div class="card mt-5">
+            <div class="card-header alert alert-success">
+                <h1>Bài tập 1: Cho người dùng nhập vào 3 số nguyên. Xuất ra 3 số theo thứ tự tăng dần</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="number1">Nhập số thứ 1</label>
+                    <input type="number" id="number1" class="form-control w-25">
+                </div>
+                <div class="form-group">
+                    <label for="number2">Nhập số thứ 2</label>
+                    <input type="number" id="number2" class="form-control w-25">
+                </div>
+                <div class="form-group">
+                    <label for="number3">Nhập số thứ 3</label>
+                    <input type="number" id="number3" class="form-control w-25">
+                </div>
+                <button onclick="btnSapXep()" class="btn btn-success">Sắp xếp</button>
+            </div>
+            <div id="showSapXep" class="card-footer">Kết quả</div>
+        </div>
+        <hr>
+        <!-- Bài tập 2 -->
+        <div class="card mt-5">
+            <div class="card-header alert alert-secondary">
+                <h1>Bài tập 2: Nhận tên người dùng và trả lại câu chào</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="inputChaoHoi">Xin hãy cho biết quý danh</label>
+                    <select name="" id="inputChaoHoi" class="form-control w-25">
+                        <option value="B">Bố</option>
+                        <option value="M">Mẹ</option>
+                        <option value="A">Anh trai</option>
+                        <option value="E">Em gái</option>
+                    </select>
+                    <!-- <input type="text" id="inputChaoHoi" class="form-control w-25"> -->
+                    <button onclick="btnChaoHoi()" class="btn btn-secondary mt-2">Nhập</button>
+                </div>
+            </div>
+            <div class="card-footer" id="showChaoHoi">
+                Kết quả
+            </div>
+
+        </div>
+
+        <hr>
+        <!-- Bài tập 3 -->
+        <div class="card mt-5">
+            <div class="card-header alert alert-warning">
+                <h1>Bài tập 3: Nhập vào 3 số nguyên, xuất ra có bao nhiêu số chẵn và bao nhiêu số lẻ</h1>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div class="form-group">
+                        <label for="soThuNhat">Nhập số thứ nhất</label>
+                        <input type="number" id="soThuNhat" class="form-control ">
+                    </div>
+                    <div class="form-group">
+                        <label for="soThuHai">Nhập số thứ hai</label>
+                        <input type="number" id="soThuHai" class="form-control ">
+                    </div>
+                    <div class="form-group">
+                        <label for="soThu">Nhập số thứ ba</label>
+                        <input type="number" id="soThuBa" class="form-control ">
+                    </div>
+                </div>
+                <button onclick="kiemTraBaiTap3()" class="btn btn-warning">Kiểm tra</button>
+            </div>
+            <div id="showBaiTap3" class="card-footer">
+                Kết quả
+            </div>
+        </div>
+
+        <hr>
+        <!-- Bài tập 4 -->
+        <div class="card mt-5">
+            <div class="card-header alert alert-primary">
+                <h1>Bài tập 4: nhập 3 cạnh của tam giác, trả kết quả đó là tam giác gì</h1>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div class="form-group">
+                        <label for="canh1">Nhập cạnh 1</label>
+                        <input type="text" id="canh1" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="canh2">Nhập cạnh 2</label>
+                        <input type="text" id="canh2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="canh3">Nhập cạnh 3</label>
+                        <input type="text" id="canh3" class="form-control">
+                    </div>
+
+                </div>
+                <button onclick="kiemTraTamGiac()" class="btn btn-primary">Kiểm tra</button>
+
+            </div>
+            <div class="card-footer" id="showKetQuaBai4">
+                Kết quả
+            </div>
+        </div>
+
+        <hr>
+        <!-- Bài tập 5 -->
+
+        <div class="card mt-5">
+            <div class="card-header alert alert-dark">
+                <h1>Bài tập 5: nhập vào ngày tháng năm, trả ra kết quả ngày tháng năm của ngày <strong
+                        class="font-size: 50px">NGÀY MAI</strong></h1>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div class="form-group">
+                        <label for="day">Ngày</label>
+                        <input type="text" id="day" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="month">Tháng</label>
+                        <select class="form-control" id="month">
+                            <option value="1">Tháng 1</option>
+                            <option value="2">Tháng 2</option>
+                            <option value="3">Tháng 3</option>
+                            <option value="4">Tháng 4</option>
+                            <option value="5">Tháng 5</option>
+                            <option value="6">Tháng 6</option>
+                            <option value="7">Tháng 7</option>
+                            <option value="8">Tháng 8</option>
+                            <option value="9">Tháng 9</option>
+                            <option value="10">Tháng 10</option>
+                            <option value="11">Tháng 11</option>
+                            <option value="12">Tháng 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Năm</label>
+                        <input type="text" id="year" class="form-control">
+                    </div>
+                </div>
+                <button onclick="baiTap5NgayMai()" class="btn btn-dark">Kiểm tra</button>
+            </div>
+            <div id="showBaiTap5" class="card-footer">
+                Ngày tháng năm tiếp theo
+            </div>
+        </div>
+
+        <div class="card mt-5">
+            <div class="card-header alert alert-danger">
+                <h1>Bài tập 5: nhập vào ngày tháng năm, trả ra kết quả ngày tháng năm của ngày <strong
+                        style="font-size: 50px">HÔM QUA</strong>
+                </h1>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div class="form-group">
+                        <label for="day">Ngày</label>
+                        <input type="text" id="day1" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="month1">Tháng</label>
+                        <select class="form-control" id="month1">
+                            <option value="1">Tháng 1</option>
+                            <option value="2">Tháng 2</option>
+                            <option value="3">Tháng 3</option>
+                            <option value="4">Tháng 4</option>
+                            <option value="5">Tháng 5</option>
+                            <option value="6">Tháng 6</option>
+                            <option value="7">Tháng 7</option>
+                            <option value="8">Tháng 8</option>
+                            <option value="9">Tháng 9</option>
+                            <option value="10">Tháng 10</option>
+                            <option value="11">Tháng 11</option>
+                            <option value="12">Tháng 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year1">Năm</label>
+                        <input type="text" id="year1" class="form-control">
+                    </div>
+                </div>
+                <button onclick="baiTap5HomQua()" class="btn btn-danger">Kiểm tra</button>
+            </div>
+            <div id="showBaiTap5HomQua" class="card-footer">
+                Ngày tháng năm hôm qua
+            </div>
+        </div>
+
+        <!-- Bài tập 6 -->
+        <div class="card mt-5">
+            <div class="card-header alert alert-info">
+                <h1>Bài tập 6: nhập vào tháng, năm. Trả kết quả tháng đó có bao nhiêu ngày</h1>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-around">
+                    <div class="form-group">
+                        <label for="thang">Tháng</label>
+                        <select class="form-control" id="thang">
+                            <option value="1">Tháng 1</option>
+                            <option value="2">Tháng 2</option>
+                            <option value="3">Tháng 3</option>
+                            <option value="4">Tháng 4</option>
+                            <option value="5">Tháng 5</option>
+                            <option value="6">Tháng 6</option>
+                            <option value="7">Tháng 7</option>
+                            <option value="8">Tháng 8</option>
+                            <option value="9">Tháng 9</option>
+                            <option value="10">Tháng 10</option>
+                            <option value="11">Tháng 11</option>
+                            <option value="12">Tháng 12</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nam">Năm</label>
+                        <input type="text" id="nam" class="form-control">
+                    </div>
+                </div>
+                <button onclick="baiTap6()" class="btn btn-info">Kiểm tra</button>
+
+            </div>
+            <div id="showBaiTap6" class="card-footer">
+                Kết quả
+            </div>
+        </div>
+
+        <hr>
+        <!-- Bài tập 7 -->
+        <div class="card mt-5">
+            <div class="card-header alert alert-success">
+                <h1>Bài tập 7: Nhập số nguyên có 3 chữ số, in ra cách đọc nó.</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="number">Nhập vào số nguyên 3 chữ số</label>
+                    <input type="text" id="number" class="form-control w-25">
+                </div>
+                <button class="btn btn-success" onclick="baiTap7()">Cách đọc</button>
+            </div>
+            <div id="showBaiTap7" class="card-footer">
+                Kết quả
+            </div>
+        </div>
+
+        <hr>
+        <!-- Bài tập 8 -->
+        <div class="card mt-5">
+            <div class="card-header alert alert-primary">
+                <h1>Bài tập 8: Cho biết tên và tọa độ nhà của 3 sinh viên và tọa độ trường đại học, trả kết quả ra tên
+                    sinh viên xa trường nhất</h1>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <label>Sinh viên A</label>
+                        <div class="form-group">
+                            <input class="mt-2 form-control" id="tenA" placeholder="Nhập tên vào đây">
+                            <input class="mt-2 form-control" id="xA" placeholder="Nhập tọa độ x">
+                            <input class="mt-2 form-control" id="yA" placeholder="Nhập tọa độ y">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <label>Sinh viên B</label>
+                        <div class="form-group">
+                            <input class="mt-2 form-control" id="tenB" placeholder="Nhập tên vào đây">
+                            <input class="mt-2 form-control" id="xB" placeholder="Nhập tọa độ x">
+                            <input class="mt-2 form-control" id="yB" placeholder="Nhập tọa độ y">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <label>Sinh viên C</label>
+                        <div class="form-group">
+                            <input class="mt-2 form-control" id="tenC" placeholder="Nhập tên vào đây">
+                            <input class="mt-2 form-control" id="xC" placeholder="Nhập tọa độ x">
+                            <input class="mt-2 form-control" id="yC" placeholder="Nhập tọa độ y">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <label>Trường học</label>
+                        <div class="form-group">
+
+                            <input class="mt-2 form-control" id="xT" placeholder="Nhập tọa độ x">
+                            <input class="mt-2 form-control" id="yT" placeholder="Nhập tọa độ y">
+                        </div>
+                    </div>
+
+                </div>
+                <button onclick="baiTap8()" class="btn btn-primary">Đo kết quả</button>
+            </div>
+            <div id="showBaiTap8" class="card-footer">
+                Kết quả
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
