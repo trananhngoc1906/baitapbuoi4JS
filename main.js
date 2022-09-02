@@ -14,18 +14,31 @@ function btnSapXep() {
   var ketQua = "";
 
   //xuly
-  if (a < b && b < c) {
-    ketQua = "Số thứ 1" + " ," + "Số thứ 2" + " ," + "Số thứ 3";
-  } else if (b < a && a < c) {
-    ketQua = "Số thứ 2" + " ," + "Số thứ 1" + " ," + "Số thứ 3";
-  } else if (a < c && c < b) {
-    ketQua = "Số thứ 1" + " ," + "Số thứ 3" + " ," + "Số thứ 2";
-  } else if (c < a && a < b) {
-    ketQua = "Số thứ 3" + " ," + "Số thứ 1" + " ," + "Số thứ 2";
-  } else if (b < c && c < a) {
-    ketQua = "Số thứ 2" + " ," + "Số thứ 3" + " ," + "Số thứ 1";
+  // trong truong hop a,..,.. hoac ..,a,..
+  if (a < b || a < c) {
+    //truong hop a,..,..
+    if (a < b && a < c) {
+      if (b > c) {
+        ketQua = a + " ," + c + " ," + b;
+      } else {
+        ketQua = a + " ," + b + " ," + c;
+      }
+    } else {
+      //truong hop ..,a,..
+      if (b > c) {
+        ketQua = c + " ," + a + " ," + b;
+      } else {
+        ketQua = b + " ," + a + " ," + c;
+      }
+    }
   } else {
-    ketQua = "Số thứ 3" + " ," + "Số thứ 2" + " ," + "Số thứ 1";
+    //truong hop ..,..,a
+    //so tiep b va c
+    if (b > c) {
+      ketQua = c + " ," + b + " ," + a;
+    } else {
+      ketQua = b + " ," + c + " ," + a;
+    }
   }
 
   //output
